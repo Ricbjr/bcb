@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "07c08e7b-a2aa-459d-b1b2-f6b0a8141773",
+		"name": "Mensagens",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16565651"
+	},
+	"item": [
+		{
+			"name": "Enviar mensagem",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"texto\": \"Isto é uma mensagem\",\r\n    \"usuarioEnvio\": \"187db9d1-887b-4b7b-8076-d961027fcba5\",\r\n    \"usuarioRecebido\": \"e42ab617-7f37-4539-a3a2-9bc1c45de39d\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/mensagem",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mensagem"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMensagem",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/mensagem/ade4f0d6-2205-494b-a69f-3ffcad5010d8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mensagem",
+						"ade4f0d6-2205-494b-a69f-3ffcad5010d8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pegar mensagens do usuario",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

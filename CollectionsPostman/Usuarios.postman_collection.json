@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "34c49c19-1e89-46af-819a-3794bee14bca",
+		"name": "Usuarios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16565651"
+	},
+	"item": [
+		{
+			"name": "Pegar Todos Usuários",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pegar usuário por UUID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuarios/ade4f0d6-2205-494b-a69f-3ffcad5010d8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"ade4f0d6-2205-494b-a69f-3ffcad5010d8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Incluir usuário",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Ricardo\",\r\n    \"email\": \"ricardo@hotmail.com\",\r\n    \"telefone\": \"99909-4162\",\r\n    \"cpf\": \"teste\",\r\n    \"cnpj\": \"testecnpj\",\r\n    \"nomeEmpresa\": \"empresa\",\r\n    \"idPlano\": \"96a91b75-1b33-4f01-bf96-94ff62a04648\",\r\n    \"saldo\": 10.0,\r\n    \"limiteMensagem\":10\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

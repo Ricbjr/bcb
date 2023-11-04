@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "3b3b398d-b241-4b46-92ce-80a6b2c0c61c",
+		"name": "Financeiro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16565651"
+	},
+	"item": [
+		{
+			"name": "Pegar saldo cliente",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/financeiro/cliente/credito/093b1e03-d713-48ac-ae81-bdedafc57d48",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"financeiro",
+						"cliente",
+						"credito",
+						"093b1e03-d713-48ac-ae81-bdedafc57d48"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pegar informações do cliente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/financeiro/cliente/093b1e03-d713-48ac-ae81-bdedafc57d48",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"financeiro",
+						"cliente",
+						"093b1e03-d713-48ac-ae81-bdedafc57d48"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar plano do cliente",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idUsuario\": \"45382171-4758-4956-893d-7eed545a61cd\",\r\n    \"nome\": \"Ricardo\",\r\n    \"email\": \"ricardo@hotmail.com\",\r\n    \"telefone\": \"99909-4162\",\r\n    \"cpf\": \"teste\",\r\n    \"cnpj\": \"testecnpj\",\r\n    \"nomeEmpresa\": \"empresa\",\r\n    \"idPlano\": \"dff85d7c-a0c1-479f-b913-a1d27a581c28\",\r\n    \"saldo\": 10.0,\r\n    \"limiteMensagem\":10\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/financeiro/cliente/plano/45382171-4758-4956-893d-7eed545a61cd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"financeiro",
+						"cliente",
+						"plano",
+						"45382171-4758-4956-893d-7eed545a61cd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar limite do cliente",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idUsuario\": \"093b1e03-d713-48ac-ae81-bdedafc57d48\",\r\n    \"nome\": \"Ricardo\",\r\n    \"email\": \"ricardo@hotmail.com\",\r\n    \"telefone\": \"99909-4162\",\r\n    \"cpf\": \"teste\",\r\n    \"cnpj\": \"testecnpj\",\r\n    \"nomeEmpresa\": \"empresa\",\r\n    \"idPlano\": \"7f3df3e2-f847-46b2-aaa7-87a6c8b38cc6\",\r\n    \"saldo\": 10.0,\r\n    \"limiteMensagem\":30\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/financeiro/cliente/limite/093b1e03-d713-48ac-ae81-bdedafc57d48",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"financeiro",
+						"cliente",
+						"limite",
+						"093b1e03-d713-48ac-ae81-bdedafc57d48"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar credito do cliente",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idUsuario\": \"093b1e03-d713-48ac-ae81-bdedafc57d48\",\r\n    \"nome\": \"Ricardo\",\r\n    \"email\": \"ricardo@hotmail.com\",\r\n    \"telefone\": \"99909-4162\",\r\n    \"cpf\": \"teste\",\r\n    \"cnpj\": \"testecnpj\",\r\n    \"nomeEmpresa\": \"empresa\",\r\n    \"idPlano\": \"7f3df3e2-f847-46b2-aaa7-87a6c8b38cc6\",\r\n    \"saldo\": 15.0,\r\n    \"limiteMensagem\":30\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/financeiro/cliente/credito/093b1e03-d713-48ac-ae81-bdedafc57d48",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"financeiro",
+						"cliente",
+						"credito",
+						"093b1e03-d713-48ac-ae81-bdedafc57d48"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
